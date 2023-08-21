@@ -7,6 +7,7 @@ const cors = require('cors');
 // const { typeDefs, resolvers } = require('./schemas');
 // const db = require('./config/connection');
 const { db } = require('./db/db')
+const {readdirSync} = require('fs')
 require ('dotenv').config()
 const PORT = process.env.PORT
 const app = express();
@@ -16,6 +17,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cors({
 }));
+
+//Routes
+//base api v1 we can change versions later if needed
+readdirSync('./routes').map((route) => app.use('./api/v1', require('./routes/' + route)))
+
 
 app.get('/', (req, res) => {
     res.send ('Hello World')
