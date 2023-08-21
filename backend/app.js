@@ -6,6 +6,7 @@ const cors = require('cors');
 
 // const { typeDefs, resolvers } = require('./schemas');
 // const db = require('./config/connection');
+const { db } = require('./db/db')
 require ('dotenv').config()
 const PORT = process.env.PORT
 const app = express();
@@ -22,6 +23,7 @@ app.get('/', (req, res) => {
 });
 
 const server = () => {
+    db()
     app.listen(PORT, () =>{
         console.log('You are listening to port:', PORT);
     })
