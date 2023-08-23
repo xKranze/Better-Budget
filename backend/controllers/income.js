@@ -29,6 +29,6 @@ exports.addIncome = async (req, res) => {
         await income.save()
         res.status(200).json({message: 'Income added!$$$'})
     } catch (error) {
-
+        res.status(500).json({message: 'Invalid Data!!'})
     }
 }
