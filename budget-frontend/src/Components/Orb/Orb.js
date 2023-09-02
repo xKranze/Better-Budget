@@ -16,7 +16,8 @@ function Orb() {
         transform: translate(0, 0);
     }
     50%{
-        transform: translate(${width/1.2}px, ${height/2}px);
+        /* transform: translate(${width/1.2}px, ${height/2}px); */
+        transform: translate(200px, 400px);
     }
     100%{
         transform: translate(0, 0);
@@ -34,7 +35,7 @@ function Orb() {
     background: linear-gradient(180deg, #F56692 30%, purple 100%);
     //blurs background orb
     filter: blur(260px);
-    animation: ${moveOrb} 10s alternate linear infinite;
+    animation: ${moveOrb} 7s alternate linear infinite;
 `;
 
     return (
