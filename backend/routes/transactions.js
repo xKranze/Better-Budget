@@ -12,8 +12,8 @@ router.post('/add-income', addIncome)
 
     //get the addExpense function
     .post('/add-expense', addExpense)
-    .get('/get-expense', getExpense)
+    .get('/get-expenses', getExpense)
     //delete request using get id for params
-    .delete('/delete-expense/:id', deleteIExpense)
+    .delete('/delete-expenses/:id', deleteIExpense)
 
 module.exports = router

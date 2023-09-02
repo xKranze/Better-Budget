@@ -34,19 +34,19 @@ exports.addExpense = async (req, res) => {
     console.log(expense)
 }
 
-//GET Income
+//GET expense
 exports.getExpense = async (req, res) =>{
+    //Fetch all records from the ExpenseSchema collection and sorts them based on the createdAt field in descending order,  This will sort last created item and sort to the top of list, by default last created item will be at bottom of list. Meaning that the newest records will appear at the beginning of the incomes array.
     try {
-        //Fetch all records from the ExpenseSchema collection and sorts them based on the createdAt field in descending order,  This will sort last created item and sort to the top of list, by default last created item will be at bottom of list. Meaning that the newest records will appear at the beginning of the incomes array.
         const incomes = await ExpenseSchema.find().sort({createdAt: -1})
-        res.status(200).json(expense)
+        res.status(200).json(incomes)
     } catch (error) {
         res.status(500).json({message: 'ERROR Invalid Data!'})
     }
 }
 
 
-//DELETE Income by id
+//DELETE expense by id
 exports.deleteIExpense = async (req, res) =>{
    const {id} = req.params;
 //    console.log(req.params);
