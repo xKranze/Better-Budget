@@ -1,17 +1,17 @@
 import { styled } from "styled-components";
 import bg from './img/bg.png'
 import {MainLayout} from './styles/Layouts'
+import Orb from './Components/Orb/Orb'
+
 
 function App() {
   return (
     <AppStyled bg={bg} className="App">
-   <MainLayout>
-    <h1>
-     
-      Tetsing
-    </h1>
-   </MainLayout>
-    </AppStyled>
+    <Orb/>
+    <MainLayout>
+   
+    </MainLayout>
+  </AppStyled>
   );
 }
 //access background image as a prop
