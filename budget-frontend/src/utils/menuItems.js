@@ -1,3 +1,4 @@
+import { dashboard, expenses, transactions, trend } from "./icons"
 export const menuItems = [
     {
         id: 1,
