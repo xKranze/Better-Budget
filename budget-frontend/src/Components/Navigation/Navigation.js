@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import avatar from '../../img/avatar.png'
-import { menuItems } from "../../utils/menuitems"
+import { menuItems } from "../../utils/menuItems"
 import { signout } from "../../utils/icons"
 
 

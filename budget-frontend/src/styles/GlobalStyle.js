@@ -18,10 +18,7 @@ export const GlobalStyle = createGlobalStyle`
         --color-delete: #FF0000;
     }
 
-
-
     body{
-
         font-family: 'Nunito', sans-serif;
         font-size: clamp(1rem, 1.5vw, 1.2rem);
         overflow: hidden;
